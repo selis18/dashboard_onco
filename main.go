@@ -54,7 +54,7 @@ func main() {
 		}
 		tmpl.Execute(w, patients)
 	})
-	mux.Handle("/src/static/", http.StripPrefix("/src/static/", http.FileServer(http.Dir("src/static"))))
+	mux.Handle("./src/static/", http.StripPrefix("./src/static/", http.FileServer(http.Dir("./src/static"))))
 
 	// Используем middleware для включения CORS
 	fmt.Println("Server started at :8080")

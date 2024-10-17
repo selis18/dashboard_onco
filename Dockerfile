@@ -8,6 +8,8 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o server
 
 FROM alpine:latest
 
+RUN apk add --no-cache ca-certificates
+
 COPY --from=builder /app/server ./
 
 COPY src/static/ ./src/static/
