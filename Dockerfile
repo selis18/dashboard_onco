@@ -10,7 +10,7 @@ FROM alpine:latest
 
 COPY --from=builder /app/server ./
 
-COPY src/static/ ./static/
+COPY src/static/ ./src/static/
 
 EXPOSE 8080
 
