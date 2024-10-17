@@ -47,7 +47,7 @@ func main() {
 
 	// Настройка маршрутизации
 	mux.HandleFunc("/home", func(w http.ResponseWriter, r *http.Request) {
-		tmpl, err := template.ParseFiles("./src/index.html")
+		tmpl, err := template.ParseFiles("./src/static/index.html")
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
