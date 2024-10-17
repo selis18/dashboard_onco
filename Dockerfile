@@ -12,6 +12,6 @@ COPY --from=builder /app/server ./
 
 COPY static/ ./static/
 
-EXPOSE 80
+EXPOSE 8080
 
-CMD ["./server", "--port", "80"]
+CMD ["./server", "--port", "8080"]
