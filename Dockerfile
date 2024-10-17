@@ -12,7 +12,7 @@ RUN apk add --no-cache ca-certificates
 
 COPY --from=builder /app/server ./
 
-COPY src/static/ ./src/static/
+COPY src/ ./src/
 
 EXPOSE 8080
 
